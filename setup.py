@@ -19,7 +19,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     url='http://github.com/clinicedc/edc-fieldsets',
-    license='GPL licence, see LICENCE',
+    license='GPL license, see LICENSE',
     description='ModelAdmin mixins to extend admin field sets',
     long_description=README,
     zip_safe=False,
