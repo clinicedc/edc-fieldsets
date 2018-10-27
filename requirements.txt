@@ -1,2 +1,7 @@
-git+https://github.com/clinicedc/edc-base@develop#egg=edc_base
-git+https://github.com/clinicedc/edc-model-fields@develop#egg=edc-model-fields
+django_crypto_fields
+edc_appointment
+edc_device
+edc_metadata
+edc_registration
+edc_timepoint
+edc_visit_schedule
