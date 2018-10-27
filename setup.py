@@ -24,6 +24,8 @@ setup(
     long_description=README,
     zip_safe=False,
     keywords='django edc modeladmin fieldsets',
+    install_requires=[
+        'Django'],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
