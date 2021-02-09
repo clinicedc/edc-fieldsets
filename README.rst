@@ -1,4 +1,4 @@
-|pypi| |travis| |coverage|
+|pypi| |actions| |coverage|
 
 edc-fieldsets
 -------------
@@ -50,10 +50,9 @@ The ``conditional_fieldsets`` will only display for CRF completed at visit ``DAY
 
 .. |pypi| image:: https://img.shields.io/pypi/v/edc-fieldsets.svg
     :target: https://pypi.python.org/pypi/edc-fieldsets
-    
-.. |travis| image:: https://travis-ci.com/clinicedc/edc-fieldsets.svg?branch=develop
-    :target: https://travis-ci.com/clinicedc/edc-fieldsets
-    
+
+.. |actions| image:: https://github.com/clinicedc/edc-fieldsets/workflows/build/badge.svg?branch=develop
+  :target: https://github.com/clinicedc/edc-fieldsets/actions?query=workflow:build
+
 .. |coverage| image:: https://coveralls.io/repos/github/clinicedc/edc-fieldsets/badge.svg?branch=develop
     :target: https://coveralls.io/github/clinicedc/edc-fieldsets?branch=develop
-    
