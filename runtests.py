@@ -7,6 +7,7 @@ from os.path import abspath, dirname
 import django
 from django.conf import settings
 from django.test.runner import DiscoverRunner
+from edc_constants.constants import IGNORE
 from edc_test_utils import DefaultTestSettings
 
 app_name = "edc_fieldsets"
@@ -16,6 +17,9 @@ DEFAULT_SETTINGS = DefaultTestSettings(
     calling_file=__file__,
     BASE_DIR=base_dir,
     APP_NAME=app_name,
+    EDC_NAVBAR_VERIFY_ON_LOAD=IGNORE,
+    EDC_AUTH_SKIP_SITE_AUTHS=True,
+    EDC_AUTH_SKIP_AUTH_UPDATER=True,
     INSTALLED_APPS=[
         "django.contrib.admin",
         "django.contrib.auth",
