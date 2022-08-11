@@ -1,7 +1,0 @@
-django_crypto_fields
-edc_appointment
-edc_device
-edc_metadata
-edc_registration
-edc_timepoint
-edc_visit_schedule
