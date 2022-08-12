@@ -29,8 +29,6 @@ DEFAULT_SETTINGS = DefaultTestSettings(
         "django.contrib.sites",
         "django_crypto_fields.apps.AppConfig",
         "django_revision.apps.AppConfig",
-        "rest_framework",
-        "rest_framework.authtoken",
         "simple_history",
         "edc_auth.apps.AppConfig",
         "edc_appointment.apps.AppConfig",
