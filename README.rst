@@ -28,6 +28,7 @@ For example:
 
 where ``fieldset`` is:
 
+
 .. code-block:: python
 
     biosynex_fieldset = Fieldset(
