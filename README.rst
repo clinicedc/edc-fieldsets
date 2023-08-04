@@ -8,51 +8,51 @@ For example:
 
 .. code-block:: python
 
-	from .fieldsets import fieldset, biosynex_fieldset
+    from .fieldsets import fieldset, biosynex_fieldset
 
 
-	@admin.register(BloodResult, site=ambition_subject_admin)
-	class BloodResultsAdmin(CrfModelAdminMixin, admin.ModelAdmin):
+    @admin.register(BloodResult, site=ambition_subject_admin)
+    class BloodResultsAdmin(CrfModelAdminMixin, admin.ModelAdmin):
 
-	    form = BloodResultForm
+        form = BloodResultForm
 
-	    conditional_fieldsets = {DAY1: biosynex_fieldset}
+        conditional_fieldsets = {DAY1: biosynex_fieldset}
 
-	    fieldsets_move_to_end = [
-	        'Conclusion', 'Summary', 'Action', audit_fieldset_tuple[0]]
+        fieldsets_move_to_end = [
+            'Conclusion', 'Summary', 'Action', audit_fieldset_tuple[0]]
 
-	    fieldsets = fieldset
+        fieldsets = fieldset
 
-	    radio_fields = ...
+        radio_fields = ...
 
 
 where ``fieldset`` is:
 
 .. code-block:: python
 
-	biosynex_fieldset = Fieldset(
-	    'bios_crag',
-	    'crag_control_result',
-	    'crag_t1_result',
-	    'crag_t2_result',
-	    section='BIOSYNEX® CryptoPS (Semi-quantitative CrAg)')
+    biosynex_fieldset = Fieldset(
+        'bios_crag',
+        'crag_control_result',
+        'crag_t1_result',
+        'crag_t2_result',
+        section='BIOSYNEX® CryptoPS (Semi-quantitative CrAg)')
 
-	fieldset = [(None, {'fields': ('subject_visit', 'report_datetime',)})]
-	fieldset.append(('Conclusion', {
-	    'fields': ('results_abnormal', 'results_reportable')}))
-	fieldset.append(
-	    ('Summary', {'classes': ('collapse', ), 'fields': ('summary', )}))
-	fieldset.append(action_fieldset_tuple)
-	fieldset.append(audit_fieldset_tuple)
+    fieldset = [(None, {'fields': ('subject_visit', 'report_datetime',)})]
+    fieldset.append(('Conclusion', {
+        'fields': ('results_abnormal', 'results_reportable')}))
+    fieldset.append(
+        ('Summary', {'classes': ('collapse', ), 'fields': ('summary', )}))
+    fieldset.append(action_fieldset_tuple)
+    fieldset.append(audit_fieldset_tuple)
 
 The ``conditional_fieldsets`` will only display for CRF completed at visit ``DAY1``
 
 
 .. |pypi| image:: https://img.shields.io/pypi/v/edc-fieldsets.svg
-    :target: https://pypi.python.org/pypi/edc-fieldsets
+  :target: https://pypi.python.org/pypi/edc-fieldsets
 
 .. |actions| image:: https://github.com/clinicedc/edc-fieldsets/workflows/build/badge.svg?branch=develop
   :target: https://github.com/clinicedc/edc-fieldsets/actions?query=workflow:build
 
 .. |coverage| image:: https://coveralls.io/repos/github/clinicedc/edc-fieldsets/badge.svg?branch=develop
-    :target: https://coveralls.io/github/clinicedc/edc-fieldsets?branch=develop
+  :target: https://coveralls.io/github/clinicedc/edc-fieldsets?branch=develop
