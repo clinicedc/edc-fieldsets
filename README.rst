@@ -52,8 +52,8 @@ The ``conditional_fieldsets`` will only display for CRF completed at visit ``DAY
 .. |pypi| image:: https://img.shields.io/pypi/v/edc-fieldsets.svg
   :target: https://pypi.python.org/pypi/edc-fieldsets
 
-.. |actions| image:: https://github.com/clinicedc/edc-fieldsets/workflows/build/badge.svg?branch=develop
-  :target: https://github.com/clinicedc/edc-fieldsets/actions?query=workflow:build
+.. |actions| image:: https://github.com/clinicedc/edc-fieldsets/actions/workflows/build.yml/badge.svg
+  :target: https://github.com/clinicedc/edc-fieldsets/actions/workflows/build.yml
 
 .. |coverage| image:: https://coveralls.io/repos/github/clinicedc/edc-fieldsets/badge.svg?branch=develop
   :target: https://coveralls.io/github/clinicedc/edc-fieldsets?branch=develop
